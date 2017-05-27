@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="jsyntaxpane-1.1.4">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/FunctionTest/lib/jsyntaxpane-1.1.4.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

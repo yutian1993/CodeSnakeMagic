@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="jEditor-syntaxes">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/FunctionTest/lib/jEditor-syntaxes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

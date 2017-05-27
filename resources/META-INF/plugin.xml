@@ -1,0 +1,54 @@
+<idea-plugin version="2">
+  <id>com.candlewen.unique.plugin.id</id>
+  <name>Code Magic</name>
+  <version>0.5</version>
+  <vendor email="candlewen@163.com" >candlewen</vendor>
+
+  <description><![CDATA[
+      Save your code in tools and your mobile phone.<br>
+      <em>The mobile is still under development!</em>
+    ]]></description>
+
+  <change-notes><![CDATA[
+      Plug-in prototype.<br>
+      <em>The tool will be updated later</em>
+    ]]>
+  </change-notes>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+  <idea-version since-build="145.0"/>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+       on how to target different products -->
+  <!-- uncomment to enable plugin in all products
+  <depends>com.intellij.modules.lang</depends>
+  -->
+
+  <extensions defaultExtensionNs="com.intellij">
+    <!-- Setting -->
+    <applicationConfigurable instance="control.SettingConfigure"></applicationConfigurable>
+    <applicationService serviceInterface="control.SettingControl" serviceImplementation="control.SettingControl"></applicationService>
+
+    <!-- Tool Window -->
+    <toolWindow id="CodeSnake Magic" anchor="right" factoryClass="control.ToolWindowConfigure" icon="/img/mainicon.png"></toolWindow>
+
+    <!-- Services -->
+    <applicationService serviceInterface="service.SearchService" serviceImplementation="service.impl.SearchServiceImpl"></applicationService>
+    <applicationService serviceInterface="service.ItemService" serviceImplementation="service.impl.ItemServiceImpl"></applicationService>
+
+  </extensions>
+
+  <actions>
+    <!-- Add your actions here -->
+    <action id="CodeSnakeMagic" class="MainWindowAction" text="Code Snake Magic" description="Code Snake Magic">
+      <add-to-group group-id="ToolsMenu" anchor="last"/>
+      <keyboard-shortcut keymap="$default" first-keystroke="shift alt P"/>
+    </action>
+  </actions>
+
+  <application-components>
+    <component>
+      <implementation-class>CodeAppComponent</implementation-class>
+    </component>
+  </application-components>
+</idea-plugin>
